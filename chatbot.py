@@ -37,7 +37,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
     msg = update.effective_message
     keyb = []
-    keyb.append await msg.reply_text(f"ʜᴇʏᴀ\nɪ'ᴍ {context.bot.first_name}\n𝙽𝚘𝚠 𝙸 𝚌𝚊𝚗 𝚌𝚑𝚊𝚝 𝚠𝚒𝚝𝚑 𝚞 𝚊𝚕𝚜𝚘", reply_markup=InlineKeyboardMarkup(keyb))
+    keyb.append( await msg.reply_text(f"ʜᴇʏᴀ\nɪ'ᴍ {context.bot.first_name}\n𝙽𝚘𝚠 𝙸 𝚌𝚊𝚗 𝚌𝚑𝚊𝚝 𝚠𝚒𝚝𝚑 𝚞 𝚊𝚕𝚜𝚘", reply_markup=InlineKeyboardMarkup(keyb))
 
 
 async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
