@@ -37,7 +37,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
     msg = update.effective_message
     keyb = []
-    keyb.append(InlineKeyboardButton(msg.reply_text(f"ʜᴇʏᴀ\nɪ'ᴍ {context.bot.first_name}\n𝙽𝚘𝚠 𝙸 𝚌𝚊𝚗 𝚌𝚑𝚊𝚝 𝚠𝚒𝚝𝚑 𝚞 𝚊𝚕𝚜𝚘", reply_markup=InlineKeyboardMarkup(keyb))
+    keyb.append([InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"http://t.me/{context.bot.username}?startgroup=true")])
+    await msg.reply_text(f"ʜᴇʏᴀ\nɪ'ᴍ {context.bot.first_name}\nɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ᴀᴄᴛɪᴠᴇ ʏᴏᴜʀ ᴄʜᴀᴛ", reply_markup=InlineKeyboardMarkup(keyb))
 
 
 async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -102,7 +103,7 @@ async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
                    chatbotai.insert_one({"chat":chat.id, "word": message.reply_to_message.text, "text": message.text, "check": "none"})
 
 
-START = CommandHandler(["start", "ki"], start, block=False)
+START = CommandHandler(["mal", "ki"], start, block=False)
 
 
 USER_HANDLER = MessageHandler(
